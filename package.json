@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "description": "thomasg.be",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-connect": "*",
+    "gulp-minify-css": "*",
+    "gulp-htmlmin": "*",
+    "gulp-uglify": "*",
+    "gulp-concat": "*",
+    "gulp-open": "*"
+  }
+}

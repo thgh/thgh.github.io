@@ -1,0 +1,260 @@
+/* Structure */
+ html, body {
+  font-family:"Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue";
+  font-weight:300;
+  height:100%;
+  line-height:1.5em;
+}
+main {
+  overflow: visible;
+  min-height: 100%
+}
+.container {
+  margin:0 auto;
+  max-width:50em;
+  padding: 0 1em;
+}
+/* Typography */
+ a {
+  text-decoration:none;
+  color:#099;
+}
+b {
+  font-weight: 700
+}
+h2 {
+  font-weight: 300;
+}
+h2 a {
+  display:block;
+  line-height: 2em;
+  font-size: 1.5em;
+  color:#000
+}
+h2 a:hover, h2 a:focus {
+  text-decoration: underline;
+}
+p {
+  padding:.5em 0;
+}
+p a {
+  text-decoration:underline;
+  color:#099;
+}
+p a:hover, p a:focus {
+  text-decoration:none;
+}
+/* Cover */
+ #cover {
+}
+/* Header z-index:-1 */
+ header {
+  text-align: center;
+  height: 100%;
+}
+h1 {
+  position: fixed;
+  z-index: -1;
+  left:0;
+  right: 0;
+  top: 50%;
+  line-height:1em;
+  font-size:2em;
+}
+h1 strong {
+  font-weight:700;
+}
+header small {
+  font-size:.5em;
+  color: #999;
+  display: block;
+}
+/* Navigation z-index:1 */
+ nav {
+  position: fixed;
+  left:0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  line-height: 2em;
+  border-top:.25em solid #0bb;
+}
+nav ul {
+  max-width: 25em;
+  margin: 0 auto
+}
+nav li {
+  float: left;
+  width: 33.333%;
+}
+nav a {
+  transition:border 1s;
+  display:block;
+  position: relative;
+  top:-.5em;
+  background: #fff;
+  border-top:0.5em solid #0bb;
+}
+nav a b {
+  font-weight: 400;
+}
+nav a:hover, nav a:focus {
+  transition:border .2s;
+  border-top-width:1em;
+  border-top-color:#9ee
+}
+.first {
+  font-weight: 700;
+}
+/* Push here and there */
+ .push-nav {
+  padding-top: 2em;
+}
+/* Sections z-index:0 */
+ section, footer {
+  background: #fff;
+}
+/* Portfolio - grid */
+ main {
+  margin-top: -.25em!important;
+  border-top: .25em solid #0bb
+}
+.row {
+  margin: 0;
+}
+.row:before, .row:after {
+  display: table;
+  content:"";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+/* Portfolio */
+ .col {
+  overflow: hidden;
+  padding-bottom: 1em
+}
+.col h3 {
+  font-weight: 700;
+}
+.col p {
+  padding: 0;
+  line-height: 1.5em;
+  padding-bottom: .5em;
+}
+.col a {
+  font-weight: 400;
+  margin-top:0;
+  white-space: nowrap;
+}
+.col a:hover, .col a:focus {
+  color:#068;
+}
+.col a:active {
+  color:#000;
+}
+a:visited {
+  color:#000;
+}
+.col i {
+  color: #999
+}
+/* Contact form */
+ #contact, #about {
+  height:100%;
+}
+label {
+  display:none;
+}
+fieldset p {
+  padding:1px 0;
+  line-height: 0;
+}
+input, textarea {
+  padding:1em;
+  width:100%;
+  margin:0;
+  background:#eee;
+  color:#000;
+  border:0;
+}
+input:focus, textarea:focus {
+  border-color:#999;
+}
+button {
+  padding:1em;
+  margin:.5em 0;
+  min-width:20%;
+  background:#09b;
+  color:#fff;
+  border:0;
+  font-weight: 700
+}
+button:hover {
+  background:#333;
+  color:#fff;
+}
+input, textarea, button {
+  font-family:"Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue";
+  font-size: 1em;
+}
+/* Responsive */
+ @media (min-width: 30em) {
+  body {
+    font-size: 1.125em;
+  }
+  header {
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 40em) {
+  body {
+    font-size: 1.25em;
+  }
+  header {
+    font-size: 1.5em;
+  }
+}
+@media (min-height: 20em) {
+  nav {
+    line-height: 2.5em;
+  }
+  .push-nav {
+    padding-top: 2.5em;
+  }
+}
+@media (min-height: 40em) {
+  nav {
+    line-height: 3em;
+  }
+  .push-nav {
+    padding-top: 3em;
+  }
+  h2 a {
+    display:block;
+    font-size: 2em
+  }
+}
+@media (min-width: 50em) {
+  .row > .col {
+    width: 50%;
+    float: left;
+    padding-top: 1em;
+  }
+  .row .col:nth-child(2n+1) {
+    clear: left;
+  }
+  .col p {
+    font-size: .8em;
+    padding-bottom: .2em;
+  }
+}
+@media (min-height: 60em) {
+  nav {
+    line-height: 4em;
+  }
+  .push-nav {
+    padding-top: 4em;
+  }
+}
