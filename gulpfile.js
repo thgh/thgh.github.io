@@ -40,6 +40,9 @@ gulp.task('reload', ['html', 'css', 'js'], function() {
 
 gulp.task('html', function() {
   return gulp.src(html)
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest(dist))
 });
 
