@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var open = require('gulp-open');
 var connect = require('gulp-connect');
@@ -7,7 +9,6 @@ var cssmin = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 
 
-var src = 'src/';
 var dist = './';
 var html = 'src/*.html';
 var css = ['src/css/reset.css', 'src/css/main.css'];
@@ -35,7 +36,7 @@ gulp.task('run', ['reload'], function() {
 
 gulp.task('reload', ['html', 'css', 'js'], function() {
   return gulp.src(dist + 'index.html')
-    .pipe(connect.reload())
+    .pipe(connect.reload());
 });
 
 gulp.task('html', function() {
@@ -43,14 +44,14 @@ gulp.task('html', function() {
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest(dist))
+    .pipe(gulp.dest(dist));
 });
 
 gulp.task('css', function() {
   return gulp.src(css)
     .pipe(concat('main.css'))
     .pipe(cssmin())
-    .pipe(gulp.dest(dist + 'css/'))
+    .pipe(gulp.dest(dist + 'css/'));
 });
 
 gulp.task('js', function() {
@@ -58,7 +59,7 @@ gulp.task('js', function() {
     .pipe(uglify({
       outSourceMap: true
     }))
-    .pipe(gulp.dest(dist + 'js/'))
+    .pipe(gulp.dest(dist + 'js/'));
 });
 
 gulp.task('watch', function() {
