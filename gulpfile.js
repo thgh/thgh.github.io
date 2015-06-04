@@ -4,7 +4,6 @@ var gulp = require('gulp');
 var open = require('gulp-open');
 var connect = require('gulp-connect');
 var concat = require('gulp-concat');
-var htmlmin = require('gulp-htmlmin');
 var cssmin = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 
@@ -24,8 +23,7 @@ gulp.task('live', ['reload'], function() {
   });
   gulp.src('index.html')
     .pipe(open('', {
-      url: 'http://localhost:1337',
-      app: 'firefox'
+      url: 'http://localhost:1337'
     }));
 });
 
@@ -41,9 +39,6 @@ gulp.task('reload', ['html', 'css', 'js'], function() {
 
 gulp.task('html', function() {
   return gulp.src(html)
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
     .pipe(gulp.dest(dist));
 });
 

@@ -5,7 +5,6 @@
     "gulp": "*",
     "gulp-connect": "*",
     "gulp-minify-css": "*",
-    "gulp-htmlmin": "*",
     "gulp-uglify": "*",
     "gulp-concat": "*",
     "gulp-open": "*"
