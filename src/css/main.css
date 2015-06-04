@@ -1,213 +1,288 @@
-/* Structure */
-
-html, body {
+html,
+body {
   height: 100%;
   line-height: 1.5em;
   font-family: "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue";
-  font-weight: 300;
-  background: #f1f4f4;
-  color: #333;
+  font-weight: 400;
+  background: #fff;
+  color: #333
 }
+
 header {
-  border-top: .2em solid #0bb;
+  border-top: .2em solid #0bb
 }
+
 .container {
   max-width: 55rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1rem
 }
-/* Typography */
 
 a {
   text-decoration: none;
-  color: #099;
+  color: #099
 }
+
 b {
   font-weight: 700
 }
+
 h2 {
-  font-weight: 300;
+  display: inline-block;
+  font-weight: 400;
   font-variant: small-caps;
+  text-transform: low
 }
+
 h2 a {
   display: block;
-  line-height: 2em;
+  line-height: 1.5em;
+  margin-bottom: .5em;
+  border-bottom: 1px solid transparent;
   font-size: 2em;
   color: #000
 }
-h2 a:hover, h2 a:focus {
-  text-decoration: underline;
+
+h2 a:focus,
+h2 a:hover {
+  border-bottom: 1px solid #000
 }
+
 p {
-  padding: .5em 0;
+  padding: .5em 0
 }
+
 p a {
-  text-decoration: underline;
-  color: #099;
+  border-bottom: 1px solid;
+  color: #099
 }
-p a:hover, p a:focus {
-  text-decoration: none;
+
+p a:focus,
+p a:hover {
+  color: #000;
+  border-color: #ccc
 }
-/* Header */
 
 h1 {
   padding: .5em 0;
   line-height: 1em;
-  font-size: 2em;
+  font-size: 2em
 }
+
 h1 a {
   color: #333
 }
+
 h1 strong {
-  font-weight: 700;
+  font-weight: 700
 }
+
 header small {
   font-size: .5em;
+  font-weight: 300;
   color: #999;
-  display: block;
+  display: block
 }
-/* Call to action */
-
-.cta {
-  padding: 2em 0;
-  line-height: 3em;
-}
-.cta .btn {
-  margin-right: 1em;
-}
-.cta span {
-  white-space: nowrap;
-}
-/* Sections */
 
 section {
-  padding-bottom: 2em;
+  padding-bottom: 2em
 }
-/* Portfolio - grid */
 
 .row {
-  margin: 0;
+  margin: 0
 }
-.row:before, .row:after {
+
+.row:after,
+.row:before {
   display: table;
   content: "";
-  line-height: 0;
+  line-height: 0
 }
+
 .row:after {
-  clear: both;
+  clear: both
 }
-/* Portfolio */
 
 .col {
   overflow: hidden;
   padding-bottom: 1em
 }
+
 .col h3 {
-  font-weight: 700;
+  font-weight: 700
 }
+
 .col p {
-  padding: 0;
-  line-height: 1.5em;
-  padding-bottom: .5em;
+  padding: 0 0 .5em;
+  line-height: 1.5em
 }
+
 .col a {
   margin-top: 0;
-  white-space: nowrap;
+  white-space: nowrap
 }
-.col a:hover, .col a:focus {
-  color: #068;
+
+.col a:focus,
+.col a:hover {
+  color: #066
 }
+
 .col a:active {
-  color: #000;
+  color: #000
 }
+
 #portfolio a:visited {
   color: #333;
+  border-color: #ccc
 }
+
 .col i {
   color: #999
 }
-/* Contact form */
 
-#contact {
+.contact-wrapper{
   height: 100%;
+  background: #eee;
+  padding-top: 2rem;
 }
+
 label {
-  display: none;
+  display: none
 }
+
 fieldset {
-  padding-top: 1em;
+  padding-top: 1em
 }
+
 fieldset p {
-  padding: 1px 0;
-  line-height: 0;
+  padding: 2px 0;
+  line-height: 0
 }
-input, textarea {
+
+fieldset button {
+  margin: .5em 0
+}
+
+button,
+input,
+textarea {
+  font-family: "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue";
+  font-size: 1em;
+  line-height: 1em
+}
+
+input,
+textarea {
   padding: 1em;
   width: 100%;
   margin: 0;
   border: 0;
-  border-bottom: 1px solid #ccc;
-  color: #333;
+  border-left: .2em solid #ccc;
+  background: #fff;
 }
-input:focus, textarea:focus {
-  border-color: #000;
+
+input:focus,
+textarea:focus {
+  border-color: #0bb;
+  outline: 0
 }
-button, .btn {
+
+.btn,
+button {
   transition: background .3s;
-  padding: 1em;
-  line-height: 1em;
-  margin: .5em 0;
-  min-width: 20%;
+  display: block;
+  padding: 1em 1rem;
+  border: 0;
+  border-radius: 5px;
   background: #0bb;
   color: #fff;
-  border: 0;
-  font-weight: 700;
+  text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   cursor: pointer;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none
 }
-button:hover, .btn:hover {
-  background: #099;
-  color: #fff;
-}
-input, textarea, button {
-  font-family: "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue";
-  font-size: 1em;
-}
-/* Responsive */
 
-@media (min-width: 30em) {
+.btn:focus,
+.btn:hover,
+button:focus,
+button:hover {
+  background: #099;
+  color: #fff
+}
+
+.cta {
+  margin: 1em 0 2em;
+  padding: 0;
+  text-transform: uppercase
+}
+
+.btn-default {
+  display: none;
+  font-weight: 400;
+  background: #555;
+  color: #eee
+}
+
+.btn-default:focus,
+.btn-default:hover {
+  background: #444;
+  color: #fff
+}
+
+@media screen and (min-width: 30em) and (min-height: 15em) {
   body {
-    font-size: 1.125em;
- }
- header {
-   font-size: 1.25em;
+    font-size: 1.125em
+  }
+  header {
+    font-size: 1.25em
+  }
 }
-}
-@media (min-width: 40em) {
+
+@media screen and (min-width: 40em) and (min-height: 20em) {
   body {
-    font-size: 1.25em;
- }
- header {
-   font-size: 1.5em;
+    font-size: 1.25em
+  }
+  header {
+    font-size: 1.5em
+  }
+  .cta {
+    border-radius: 5px;
+    margin: 1em 0 2em
+  }
+  .btn,
+  button {
+    padding: .7em 1.2em;
+    min-width: 20%;
+    font-size: 1.2em;
+    font-weight: 300
+  }
+  .btn-contact {
+    border-radius: 0 5px 5px 0;
+    float: right
+  }
+  .btn-default {
+    padding: .7em 0;
+    display: block
+  }
 }
-}
-@media (min-height: 20em) {} @media (min-height: 40em) {
-  h2 a {
-    display: block;
-    font-size: 2em
- }
-}
+
 @media (min-width: 50em) {
-  .row > .col {
+  .row>.col {
     width: 50%;
     float: left;
-    padding-top: 1em;
- }
- .row .col: nth-child(2n+1) {
-   clear: left;
-}
-.col p {
-  font-size: .8em;
-  padding-bottom: .2em;
-}
+    padding-top: 1em
+  }
+  .row .col:nth-child(2n+1) {
+    clear: left
+  }
+  .col p {
+    font-size: .8em;
+    padding-bottom: .2em
+  }
 }
